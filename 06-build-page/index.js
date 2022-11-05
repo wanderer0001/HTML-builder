@@ -109,10 +109,10 @@ function copyAssets() {
   }
 
   updateCopyDir()
-    .then(makeDir)
+    .then((makeDir))
     .then(() => readDir(join(__dirname, 'assets')))
     .then((res) => copyDirFiles(res))
     .catch(err => err)
 }
-
+mkdir(path.join(__dirname, 'project-dist'), err => err) 
 copyAssets();
